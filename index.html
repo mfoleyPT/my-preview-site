@@ -15,7 +15,7 @@
   <meta name="geo.placename" content="Baltimore County, Maryland">
   <link rel="canonical" href="https://www.activelifesports.com">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"MedicalBusiness","name":"Active Life Physical Therapy","url":"https://www.activelifesports.com","telephone":"+14105293303","description":"One-on-one physical therapy in Baltimore County, MD. Three locations: Perry Hall, Lutherville, and Jacksonville. Hands-on Doctors of PT. Same-week scheduling.","medicalSpecialty":"PhysicalTherapy","priceRange":"$$","address":[{"@type":"PostalAddress","streetAddress":"4337 Ebenezer Road","addressLocality":"Nottingham","addressRegion":"MD","postalCode":"21236","addressCountry":"US"}],"hasMap":"https://maps.google.com/?q=Active+Life+Physical+Therapy+Perry+Hall+MD","openingHours":"Mo-Fr 07:00-19:00","sameAs":["https://www.facebook.com/activelifeandsports","https://www.instagram.com/activelifephysicaltherapy"]}
+  {"@context":"https://schema.org","@type":"MedicalBusiness","name":"Active Life Physical Therapy","url":"https://www.activelifesports.com","telephone":"+14105293303","description":"One-on-one physical therapy in Baltimore County, MD. Three locations: Perry Hall, Lutherville, and Jacksonville. Hands-on Doctors of PT. Same-week scheduling.","medicalSpecialty":"PhysicalTherapy","priceRange":"$$","address":[{"@type":"PostalAddress","streetAddress":"4337 Ebenezer Road","addressLocality":"Nottingham","addressRegion":"MD","postalCode":"21236","addressCountry":"US"}],"hasMap":"https://maps.google.com/?q=Active+Life+Physical+Therapy+Perry+Hall+MD","openingHours":"Mo-Fr 07:00-19:00","sameAs":["https://www.facebook.com/activelifept","https://www.instagram.com/activelifept"]}
   </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +60,7 @@ textarea{resize:vertical}
 
 /* ── HEADER / NAV ────────────────────────────── */
 /* Clean white with stronger bottom border so it reads as separate from utility bar */
-.sh{position:sticky;top:0;z-index:100;background:#fff;border-bottom:3px solid var(--navy);transition:box-shadow 200ms var(--ease)}
+.sh{position:sticky;top:0;z-index:100;background:#fff!important;border-bottom:3px solid var(--navy);transition:box-shadow 200ms var(--ease)}
 .sh.scrolled{box-shadow:0 4px 24px rgba(0,70,128,.15)}
 .ni{max-width:var(--c);margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;gap:32px}
 .logo{flex-shrink:0;cursor:pointer}
@@ -297,7 +297,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
 
 /* ── FOOTER ──────────────────────────────────── */
 .sf{background:#00101f;color:rgba(255,255,255,.9);padding:80px 0 0;border-top:4px solid var(--gold)}
-.fg{max-width:var(--c);margin:0 auto;padding:0 24px 64px;display:grid;grid-template-columns:260px 1fr 1fr 1fr 1fr;gap:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.fg{max-width:var(--c);margin:0 auto;padding:0 24px 64px;display:grid;grid-template-columns:300px 1fr 1fr 1fr;gap:56px;border-bottom:1px solid rgba(255,255,255,.1)}
 .fb .lt{color:var(--white)}
 .fb .ls{color:rgba(255,255,255,.4)}
 .ftag{font-family:var(--font-d);font-style:italic;font-size:16px;color:rgba(255,255,255,.75);margin-top:14px;line-height:1.55}
@@ -379,7 +379,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
 .rfg{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 
 /* MOBILE NAV */
-.mnav{display:none;position:fixed;top:0;right:0;bottom:0;width:300px;background:var(--white);box-shadow:-4px 0 40px rgba(0,70,128,.2);z-index:500;overflow-y:auto;padding:72px 24px 24px;transform:translateX(100%);transition:transform 300ms var(--ease)}
+.mnav{display:none;position:fixed;top:0;right:0;bottom:0;width:300px;background:#ffffff!important;box-shadow:-4px 0 40px rgba(0,70,128,.2);z-index:500;overflow-y:auto;padding:72px 24px 24px;transform:translateX(100%);transition:transform 300ms var(--ease)}
 .mnav.open{transform:translateX(0)}
 .mov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:400}
 .mclose{position:absolute;top:20px;right:20px;font-size:26px;color:var(--slate);cursor:pointer;font-weight:300}
@@ -451,6 +451,12 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
 @media(max-width:480px){
   .text-us-float{bottom:16px;right:16px}
   .text-us-btn{padding:12px 18px;font-size:14px}
+}
+/* ── MOBILE BRIGHTNESS FIX ──────────────────────── */
+/* Force correct nav/body colors at ALL viewport widths */
+@media(max-width:960px){
+  .sh,.sh.scrolled{background:#ffffff!important;-webkit-backdrop-filter:none;backdrop-filter:none}
+  body{background:#ffffff!important}
 }
 
 /* ── MOBILE REFINEMENTS ───────────────────────── */
@@ -576,18 +582,9 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   <div class="c">
     <div class="ul">
       <a href="tel:4105293303" class="uphone">📞 (410) 529-3303</a>
-      <a href="https://dot.cards/activelifept" target="_blank" title="Save our contact info" style="display:flex;align-items:center;gap:5px">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Save Contact
-      </a>
       <a href="https://go.promptemr.com/payment?w=642" target="_blank" class="upay">Pay Bill →</a>
     </div>
     <div class="ur">
-      <a href="https://www.instagram.com/activelifephysicaltherapy/" target="_blank" aria-label="Instagram" style="display:flex;align-items:center;gap:5px">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram
-      </a>
-      <a href="https://www.facebook.com/activelifeandsports" target="_blank" aria-label="Facebook" style="display:flex;align-items:center;gap:5px">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook
-      </a>
       <a onclick="go('about')">About</a>
       <div class="udrop">
         <a href="#">Our Team</a>
@@ -598,7 +595,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
           <a onclick="go('team-support')">Support Staff</a>
         </div></div>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3WG40icTMDXeB9e0qlDH8otDP93yEds73idkS68x0KtYuLA/viewform" target="_blank">Careers</a>
+      <a onclick="go('careers')">Careers</a>
     </div>
   </div>
 </div>
@@ -653,6 +650,18 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         </div></div>
       </li>
       <li class="nitem"><a class="nl" onclick="go('physician')">Physician Portal</a></li>
+      <li class="nitem">
+        <a class="nl" onclick="go('about')"><span>About</span></a>
+      </li>
+      <li class="nitem">
+        <a class="nl"><span>Our Team</span><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="ndrop"><div class="ndrop-inner">
+          <a onclick="go('team-ph')">Perry Hall</a>
+          <a onclick="go('team-lv')">Lutherville</a>
+          <a onclick="go('team-jv')">Jacksonville</a>
+          <a onclick="go('team-support')">Support Staff</a>
+        </div></div>
+      </li>
     </ul>
     <a class="ncta" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank">Schedule Your Visit <span>→</span></a>
     <button class="mtoggle" onclick="openM()" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -686,7 +695,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   <div class="mnl" onclick="go('about');closeM()">About</div>
   <div class="mnl" onclick="mSub(this)">Our Team ▾</div>
   <div class="msub" style="display:none"><a onclick="go('team-ph');closeM()">Perry Hall</a><a onclick="go('team-lv');closeM()">Lutherville</a><a onclick="go('team-jv');closeM()">Jacksonville</a><a onclick="go('team-support');closeM()">Support Staff</a></div>
-  <a class="mnl" href="https://docs.google.com/forms/d/e/1FAIpQLSf3WG40icTMDXeB9e0qlDH8otDP93yEds73idkS68x0KtYuLA/viewform" target="_blank" onclick="closeM()" style="display:block;padding:14px 0;font-size:16px;font-weight:700;color:var(--ink);border-bottom:1px solid var(--border-bone)">Careers</a>
+  <div class="mnl" onclick="go('careers');closeM()">Careers</div>
   <br><a class="bp" style="width:100%;justify-content:center" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank">Schedule Your Visit →</a>
 </div>
 
@@ -843,12 +852,16 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         <div class="tc"><div class="tstars">★★★★★</div>
           <div class="tq">I'd been to two other PT clinics before Active Life. This was the first time anyone actually asked me what I wanted to get back to — and then built a plan around that answer.</div>
           <div class="ta"><div class="av">M</div><div><div class="an">Mike R.</div><div class="ar">Back to the gym after knee replacement · Perry Hall</div></div></div>
-          <a href="https://g.page/r/CfI0KFuF9IzoEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
+          <a href="https://g.page/r/CdFOeWH4hNjCEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
+        </div>
+      </div>
+
+      <!-- Review 2 - Lutherville -->
       <div class="review-slide">
         <div class="tc"><div class="tstars">★★★★★</div>
           <div class="tq">I got on the floor with my granddaughter last week for the first time in two years. I didn't think twice about it. That's what I came here for.</div>
           <div class="ta"><div class="av">K</div><div><div class="an">Karen T.</div><div class="ar">Hip and knee rehab · Lutherville</div></div></div>
-          <a href="https://g.page/r/CY9CBQdBoj2IEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
+          <a href="https://g.page/r/CRb7mgz6UT7GEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
         </div>
       </div>
 
@@ -857,7 +870,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         <div class="tc"><div class="tstars">★★★★★</div>
           <div class="tq">I finished my first half marathon after ACL surgery. My PT at Active Life kept me honest about the timeline and pushed me when I was ready. Crossed the finish line stronger than before the injury.</div>
           <div class="ta"><div class="av">J</div><div><div class="an">James W.</div><div class="ar">ACL reconstruction · Jacksonville</div></div></div>
-          <a href="https://g.page/r/CdreCe3sT6YaEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
+          <a href="https://g.page/r/CfJTJZXm7PAVEBI/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
         </div>
       </div>
 
@@ -866,7 +879,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         <div class="tc"><div class="tstars">★★★★★</div>
           <div class="tq">Every visit was hands-on. My therapist knew exactly where I was in the program every single time. That kind of attention is why this worked when nothing else did.</div>
           <div class="ta"><div class="av">R</div><div><div class="an">Robert S.</div><div class="ar">Chronic low back pain · Perry Hall</div></div></div>
-          <a href="https://g.page/r/CfI0KFuF9IzoEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
+          <a href="https://g.page/r/CdFOeWH4hNjCEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
         </div>
       </div>
 
@@ -875,7 +888,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         <div class="tc"><div class="tstars">★★★★★</div>
           <div class="tq">After my shoulder replacement I thought I'd never swing a club again. Active Life proved me wrong. Back on the course — and playing better than before the surgery.</div>
           <div class="ta"><div class="av">D</div><div><div class="an">David L.</div><div class="ar">Shoulder replacement rehab · Lutherville</div></div></div>
-          <a href="https://g.page/r/CY9CBQdBoj2IEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
+          <a href="https://g.page/r/CRb7mgz6UT7GEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
         </div>
       </div>
 
@@ -884,7 +897,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         <div class="tc"><div class="tstars">★★★★★</div>
           <div class="tq">Best PT experience I've ever had. They actually listen, they push you the right amount, and they don't discharge you until you feel truly ready. I tell everyone I know to come here.</div>
           <div class="ta"><div class="av">S</div><div><div class="an">Sara M.</div><div class="ar">Post-surgical rehab · Jacksonville</div></div></div>
-          <a href="https://g.page/r/CdreCe3sT6YaEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
+          <a href="https://g.page/r/CfJTJZXm7PAVEBI/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.05em;text-transform:uppercase">View on Google ↗</a>
         </div>
       </div>
 
@@ -898,94 +911,16 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
     </div>
 
     <!-- Link to leave a review -->
-    <div style="text-align:center;margin-top:24px">
-      <p style="font-size:13px;color:var(--slate);margin-bottom:16px">Had a great experience? Leave us a review at your location:</p>
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px">
-        <a href="https://g.page/r/CfI0KFuF9IzoEBM/review" target="_blank" class="bs" style="font-size:13px;padding:9px 20px">⭐ Perry Hall</a>
-        <a href="https://g.page/r/CY9CBQdBoj2IEBM/review" target="_blank" class="bs" style="font-size:13px;padding:9px 20px">⭐ Lutherville</a>
-        <a href="https://g.page/r/CdreCe3sT6YaEBM/review" target="_blank" class="bs" style="font-size:13px;padding:9px 20px">⭐ Jacksonville</a>
-      </div>
+    <div style="text-align:center;margin-top:20px">
+      <p style="font-size:13px;color:var(--slate);margin-bottom:12px">Had a great experience? We'd love to hear from you.</p>
+      <a href="https://g.page/r/CdFOeWH4hNjCEBM/review" target="_blank" class="bs" style="font-size:14px;padding:10px 24px">Leave Us a Google Review ↗</a>
     </div>
 
   </div><!-- end carousel wrap -->
 </div></section>
 
 <section class="sec sec-bone"><div class="cn">
-  <div class="sh2"><div class="ey">Stay Connected</div><h2>Everything You Need<br>in One Place</h2><p class="lede">Follow along, book appointments, access your exercises, and stay connected with your Active Life team.</p></div>
-
-  <!-- Apps + Quick Links Grid -->
-  <div class="g3" style="margin-bottom:56px">
-    <!-- Patient App -->
-    <div class="card" style="text-align:center">
-      <div class="ib" style="margin:0 auto 16px">📱</div>
-      <h3 style="font-size:17px">Patient App</h3>
-      <p style="font-size:14px;color:var(--slate);margin-top:8px;line-height:1.6">Message your PT, view home exercises, and manage your care — all in one place.</p>
-      <a href="https://apps.apple.com/us/iphone/search?term=active%20life%20" target="_blank" class="bg" style="margin-top:20px;font-size:13px;padding:10px 20px;display:inline-flex">Download on App Store →</a>
-    </div>
-    <!-- Online Scheduling -->
-    <div class="card" style="text-align:center">
-      <div class="ib ibg" style="margin:0 auto 16px">📅</div>
-      <h3 style="font-size:17px">Book Online</h3>
-      <p style="font-size:14px;color:var(--slate);margin-top:8px;line-height:1.6">Schedule your visit, free movement screen, or strength session online — same-week availability.</p>
-      <a href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank" class="bp" style="margin-top:20px;font-size:13px;padding:10px 20px;display:inline-flex">Schedule Now →</a>
-    </div>
-    <!-- Active Strength / Stretch / Assessments Purchase -->
-    <div class="card" style="text-align:center">
-      <div class="ib" style="margin:0 auto 16px">🏋️</div>
-      <h3 style="font-size:17px">Purchase Services</h3>
-      <p style="font-size:14px;color:var(--slate);margin-top:8px;line-height:1.6">Buy Active Strength, Active Stretch, Styku scans, and Annual Strength Assessments online.</p>
-      <a href="https://activelifefitness.mypthub.net/p/" target="_blank" class="bg" style="margin-top:20px;font-size:13px;padding:10px 20px;display:inline-flex">Shop Services →</a>
-    </div>
-    <!-- Thorne Supplements -->
-    <div class="card" style="text-align:center">
-      <div class="ib ibg" style="margin:0 auto 16px">💊</div>
-      <h3 style="font-size:17px">Thorne Supplements</h3>
-      <p style="font-size:14px;color:var(--slate);margin-top:8px;line-height:1.6">Our curated supplement dispensary. Clinical-grade products recommended by our PTs.</p>
-      <a href="https://www.thorne.com/u/ActiveLifeandSports" target="_blank" class="bp" style="margin-top:20px;font-size:13px;padding:10px 20px;display:inline-flex">Shop Thorne →</a>
-    </div>
-    <!-- Styku App -->
-    <div class="card" style="text-align:center">
-      <div class="ib" style="margin:0 auto 16px">📊</div>
-      <h3 style="font-size:17px">Styku 3D Body App</h3>
-      <p style="font-size:14px;color:var(--slate);margin-top:8px;line-height:1.6">Access your Styku 3D muscle scan results and body composition tracking from your phone.</p>
-      <a href="https://www.styku.com/mobile-app" target="_blank" class="bg" style="margin-top:20px;font-size:13px;padding:10px 20px;display:inline-flex">Get Styku App →</a>
-    </div>
-    <!-- Save Contact + Social -->
-    <div class="card" style="text-align:center">
-      <div class="ib ibg" style="margin:0 auto 16px">👤</div>
-      <h3 style="font-size:17px">Save Our Contact</h3>
-      <p style="font-size:14px;color:var(--slate);margin-top:8px;line-height:1.6">Tap to save our phone number, locations, and links directly to your contacts.</p>
-      <a href="https://dot.cards/activelifept" target="_blank" class="bp" style="margin-top:20px;font-size:13px;padding:10px 20px;display:inline-flex">Save Contact →</a>
-      <div style="display:flex;justify-content:center;gap:12px;margin-top:16px">
-        <a href="https://www.instagram.com/activelifephysicaltherapy/" target="_blank" style="color:var(--navy);font-size:13px;font-weight:600;display:flex;align-items:center;gap:5px">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram
-        </a>
-        <a href="https://www.facebook.com/activelifeandsports" target="_blank" style="color:var(--navy);font-size:13px;font-weight:600;display:flex;align-items:center;gap:5px">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Instagram Feed Embed -->
-  <div style="text-align:center;margin-bottom:16px">
-    <div class="ey">Follow Our Journey</div>
-    <h3 style="font-family:var(--font-d);font-size:clamp(20px,3vw,28px);margin-top:8px;color:var(--navy)">@activelifephysicaltherapy</h3>
-    <p style="font-size:15px;color:var(--slate);margin-top:8px">See how our patients are moving — follow us for tips, stories, and behind-the-scenes from all three locations.</p>
-  </div>
-  <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:24px">
-    <a href="https://www.instagram.com/activelifephysicaltherapy/" target="_blank" class="bp" style="font-size:14px;padding:11px 28px">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      Follow on Instagram
-    </a>
-    <a href="https://www.facebook.com/activelifeandsports" target="_blank" class="bs" style="font-size:14px;padding:11px 28px">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-      Like on Facebook
-    </a>
-  </div>
-</div></section>
-
-
+  <div class="lm">
     <div class="ll">
       <div class="ey" style="color:rgba(255,255,255,.5)">Free Movement Screen</div>
       <h2 style="color:white;margin-top:12px">Not Sure Where to Start?<br>Book a Free Screen First.</h2>
@@ -1890,18 +1825,21 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
       <p style="font-size:15px;color:var(--slate)">4337 Ebenezer Rd, Nottingham MD 21236</p>
       <a href="tel:4105293303" style="font-size:15px;color:var(--navy);font-weight:700">📞 (410) 529-3303</a>
       <p style="font-size:15px;color:var(--slate)">Mon–Fri: 7am–7pm</p>
+      <a href="https://g.page/r/CdFOeWH4hNjCEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;font-weight:700;color:#E8900C;letter-spacing:.03em">⭐ Leave a Google Review →</a>
     </div></div>
     <div class="card cbone"><h3 style="color:var(--navy)">📍 Lutherville</h3><div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
       <p style="font-size:15px;color:var(--slate)">Director: John Neitubicz, DPT</p>
       <p style="font-size:15px;color:var(--slate)">Baltimore County, MD</p>
       <a href="tel:4105293303" style="font-size:15px;color:var(--navy);font-weight:700">📞 (410) 529-3303</a>
       <p style="font-size:15px;color:var(--slate)">Mon–Fri: 7am–7pm</p>
+      <a href="https://g.page/r/CRb7mgz6UT7GEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;font-weight:700;color:#E8900C;letter-spacing:.03em">⭐ Leave a Google Review →</a>
     </div></div>
     <div class="card cbone"><h3 style="color:var(--navy);cursor:pointer" onclick="go('team-jv')">📍 Jacksonville →</h3><div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
       <p style="font-size:15px;color:var(--slate)">Clinical Ops: Christina Penny</p>
       <p style="font-size:15px;color:var(--slate)">Baltimore County, MD</p>
       <a href="tel:4105293303" style="font-size:15px;color:var(--navy);font-weight:700">📞 (410) 529-3303</a>
       <p style="font-size:15px;color:var(--slate)">Mon–Fri: 7am–7pm</p>
+      <a href="https://g.page/r/CfJTJZXm7PAVEBI/review" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;font-weight:700;color:#E8900C;letter-spacing:.03em">⭐ Leave a Google Review →</a>
     </div></div>
   </div>
 </div></section>
@@ -2000,6 +1938,12 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
     <div class="card cbone"><div class="ib">📄</div><h3>Patient Forms</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">New patient intake, health history, and consent forms. Complete before your first visit.</p><div style="margin-top:16px"><a class="bp" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank" style="font-size:13px;padding:8px 16px">Access Forms →</a></div></div>
     <div class="card cbone"><div class="ib ibg">💳</div><h3>Pay Your Bill</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Secure online billing through our patient portal. No login required.</p><div style="margin-top:16px"><a href="https://go.promptemr.com/payment?w=642" target="_blank" class="bp" style="font-size:13px;padding:8px 16px">Pay Bill →</a></div></div>
     <div class="card cbone"><div class="ib">💊</div><h3>Supplements by Thorne</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Clinician-curated supplements for recovery and performance.</p><div style="margin-top:16px"><a class="bp" onclick="go('thorne')" style="font-size:13px;padding:8px 16px">Shop Thorne →</a></div></div>
+    <div class="card cbone"><div class="ib" style="background:rgba(37,211,102,.12)">📱</div><h3>Save Our Contact</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Save Active Life PT in your phone so you never miss a call or text from us.</p><div style="margin-top:16px;display:flex;flex-direction:column;gap:8px"><a class="bp" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Active%20Life%20Physical%20Therapy%0AORG:Active%20Life%20Physical%20Therapy%0ATEL;TYPE=WORK,VOICE:(410)%20529-3303%0AADR;TYPE=WORK:;;4337%20Ebenezer%20Rd;Nottingham;MD;21236;USA%0AURL:https://www.activelifesports.com%0AEMAIL:info@activelifesports.com%0AEND:VCARD" download="ActiveLifePT.vcf" style="font-size:13px;padding:8px 16px">Save Contact →</a></div></div>
+    <div class="card cbone"><div class="ib" style="background:rgba(234,179,8,.12)">⭐</div><h3>Google Reviews</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Had a great experience? Help other Baltimore County patients find us.</p><div style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
+      <a href="https://g.page/r/CdFOeWH4hNjCEBM/review" target="_blank" style="font-size:13px;font-weight:700;color:var(--navy)">⭐ Perry Hall →</a>
+      <a href="https://g.page/r/CRb7mgz6UT7GEBM/review" target="_blank" style="font-size:13px;font-weight:700;color:var(--navy)">⭐ Lutherville →</a>
+      <a href="https://g.page/r/CfJTJZXm7PAVEBI/review" target="_blank" style="font-size:13px;font-weight:700;color:var(--navy)">⭐ Jacksonville →</a>
+    </div></div>
   </div>
 </div></section>
 
@@ -2397,7 +2341,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
     <div class="card" style="text-align:center;padding:32px 24px">
       <div style="width:96px;height:96px;border-radius:50%;overflow:hidden;margin:0 auto 20px;box-shadow:0 4px 20px rgba(0,70,128,.25)"><img src="data:image/jpeg;base64,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" alt="Joe Palmer" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block"></div>
       <h3 style="font-size:20px;color:var(--navy)">Joe Palmer</h3>
-      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-dark);margin-top:6px;margin-bottom:16px">CEO / President / Founder</div>
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-dark);margin-top:6px;margin-bottom:16px">CEO / Owner</div>
       <p style="font-size:14px;color:var(--slate);line-height:1.7">Joe founded Active Life Physical Therapy and has grown it from a single clinic to a three-location company serving Baltimore County. As CEO, CMO, and Chief Growth Officer, he drives strategy, culture, and the Active Life brand — including the Muscle Forward approach that defines how the company treats patients.</p>
     </div>
     <div class="card" style="text-align:center;padding:32px 24px">
@@ -2460,7 +2404,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   <div class="sh2"><div class="ey">Clinical Team</div><h2>Doctors of PT.<br>One-on-One, Every Visit.</h2></div>
   <div class="tmgrid">
     <div class="tmcard" >
-  <div style="aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:32px;font-weight:700">M</div>
+  <img class="tmphoto" src="https://drive.google.com/uc?export=view&id=1jrfjT2njqsURe5VjhEq8IDNY-Nrjvntr" alt="Mick Foley, DPT" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:48px;font-weight:700">M</div>
   <div class="tminfo">
     <div class="tmname">Mick Foley, DPT</div>
     <div class="tmrole">Director · Perry Hall</div>
@@ -2496,8 +2440,9 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   </div>
 </div>
   </div>
-  <div style="text-align:center;margin-top:48px">
+  <div style="text-align:center;margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:16px">
     <a class="bp" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank">Book at Perry Hall →</a>
+    <a href="https://g.page/r/CdFOeWH4hNjCEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#E8900C;letter-spacing:.02em">⭐ Leave a Google Review for Perry Hall →</a>
   </div>
 </div></section>
 </div></div>
@@ -2515,7 +2460,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   <div class="sh2"><div class="ey">Clinical Team</div><h2>Doctors of PT.<br>One-on-One, Every Visit.</h2></div>
   <div class="tmgrid">
     <div class="tmcard" >
-  <div style="aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:32px;font-weight:700">J</div>
+  <img class="tmphoto" src="https://drive.google.com/uc?export=view&id=1y41kq4UyE-VcPcLQ-XxyDY_tgRW-MvAX" alt="John Neitubicz, DPT" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:48px;font-weight:700">J</div>
   <div class="tminfo">
     <div class="tmname">John Neitubicz, DPT</div>
     <div class="tmrole">Director · Lutherville</div>
@@ -2542,8 +2487,9 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   </div>
 </div>
   </div>
-  <div style="text-align:center;margin-top:48px">
+  <div style="text-align:center;margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:16px">
     <a class="bp" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank">Book at Lutherville →</a>
+    <a href="https://g.page/r/CRb7mgz6UT7GEBM/review" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#E8900C;letter-spacing:.02em">⭐ Leave a Google Review for Lutherville →</a>
   </div>
 </div></section>
 </div></div>
@@ -2561,7 +2507,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   <div class="sh2"><div class="ey">Clinical Team</div><h2>Doctors of PT.<br>One-on-One, Every Visit.</h2></div>
   <div class="tmgrid">
     <div class="tmcard" >
-  <div style="aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:32px;font-weight:700">C</div>
+  <img class="tmphoto" src="https://drive.google.com/uc?export=view&id=1MEUiALPB21MvyDFmuO59-Ua-9t04KLG0" alt="Christina Penny" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:48px;font-weight:700">C</div>
   <div class="tminfo">
     <div class="tmname">Christina Penny</div>
     <div class="tmrole">Clinic Director, Jacksonville</div>
@@ -2588,8 +2534,9 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   </div>
 </div>
   </div>
-  <div style="text-align:center;margin-top:48px">
+  <div style="text-align:center;margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:16px">
     <a class="bp" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank">Book at Jacksonville →</a>
+    <a href="https://g.page/r/CfJTJZXm7PAVEBI/review" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#E8900C;letter-spacing:.02em">⭐ Leave a Google Review for Jacksonville →</a>
   </div>
 </div></section>
 </div></div>
@@ -2631,7 +2578,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   </div>
 </div>
     <div class="tmcard" >
-  <div style="aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:32px;font-weight:700">B</div>
+  <img class="tmphoto" src="https://drive.google.com/uc?export=view&id=1BAhkt0Ajl1NpFp2bwM1v5M1DRnoQDEHy" alt="Becky Heuer" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:48px;font-weight:700">B</div>
   <div class="tminfo">
     <div class="tmname">Becky Heuer</div>
     <div class="tmrole">Care Coordinator</div>
@@ -2640,7 +2587,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   </div>
 </div>
     <div class="tmcard" >
-  <div style="aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:32px;font-weight:700">R</div>
+  <img class="tmphoto" src="https://drive.google.com/uc?export=view&id=1yxFMh7cypdDIlqfewG-sYlmcbTML8OAL" alt="Rikka" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:48px;font-weight:700">R</div>
   <div class="tminfo">
     <div class="tmname">Rikka</div>
     <div class="tmrole">Lead Management & Care Coordinator</div>
@@ -2649,7 +2596,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   </div>
 </div>
     <div class="tmcard" >
-  <div style="aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:32px;font-weight:700">L</div>
+  <img class="tmphoto" src="https://drive.google.com/uc?export=view&id=1nUmozyZI3r7rursd-OKt-11rR0mAQFXu" alt="Lovely" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:48px;font-weight:700">L</div>
   <div class="tminfo">
     <div class="tmname">Lovely</div>
     <div class="tmrole">Administrative Production Specialist</div>
@@ -2658,7 +2605,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   </div>
 </div>
     <div class="tmcard" >
-  <div style="aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:32px;font-weight:700">A</div>
+  <img class="tmphoto" src="https://drive.google.com/uc?export=view&id=1Wz5WYl0g-fBVbXdgAi1iB5Atjdhk07gc" alt="Abby" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;aspect-ratio:3/4;background:linear-gradient(135deg,#004680,#005ea6);align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:48px;font-weight:700">A</div>
   <div class="tminfo">
     <div class="tmname">Abby</div>
     <div class="tmrole">Virtual Care Coordinator</div>
@@ -2760,7 +2707,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
 <!-- TEXT US FLOATING BUTTON -->
 <div class="text-us-float">
   <div class="text-us-label">💬 Text us to book</div>
-  <a class="text-us-btn" href="sms:4105293303?body=Hi%2C%20I%27d%20like%20to%20schedule%20an%20appointment%20at%20Active%20Life%20Physical%20Therapy." aria-label="Text us to schedule">
+  <a class="text-us-btn" href="sms:4105293303?body=Hi%2C%20my%20name%20is%20%5BYour%20Name%5D%20and%20I%27d%20like%20to%20schedule%20an%20appointment%20at%20Active%20Life%20Physical%20Therapy." aria-label="Text us to schedule">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     Text Us to Book
   </a>
@@ -3271,35 +3218,6 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         <p class="ft">Move Well. Be Strong. Live Fully.</p>
         <p class="ft" style="margin-top:8px">Serving Baltimore County since 2002.<br>Perry Hall · Lutherville · Jacksonville</p>
         <a href="tel:4105293303" style="display:inline-block;margin-top:12px;color:var(--gold);font-weight:600;font-size:15px">(410) 529-3303</a>
-        <!-- Social Icons -->
-        <div style="display:flex;gap:12px;margin-top:20px">
-          <a href="https://www.instagram.com/activelifephysicaltherapy/" target="_blank" aria-label="Instagram" style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 200ms" onmouseenter="this.style.background='rgba(228,215,126,.2)';this.style.color='#E4D77E'" onmouseleave="this.style.background='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.7)'">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://www.facebook.com/activelifeandsports" target="_blank" aria-label="Facebook" style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 200ms" onmouseenter="this.style.background='rgba(228,215,126,.2)';this.style.color='#E4D77E'" onmouseleave="this.style.background='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.7)'">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://dot.cards/activelifept" target="_blank" aria-label="Save Contact" style="width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:all 200ms" onmouseenter="this.style.background='rgba(228,215,126,.2)';this.style.color='#E4D77E'" onmouseleave="this.style.background='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.7)'" title="Save Our Contact">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </a>
-        </div>
-        <!-- Leave a Review -->
-        <div style="margin-top:20px">
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:8px">Leave Us a Review</div>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <a href="https://g.page/r/CfI0KFuF9IzoEBM/review" target="_blank" style="font-size:12px;color:var(--gold);font-weight:600">★ Perry Hall →</a>
-            <a href="https://g.page/r/CY9CBQdBoj2IEBM/review" target="_blank" style="font-size:12px;color:var(--gold);font-weight:600">★ Lutherville →</a>
-            <a href="https://g.page/r/CdreCe3sT6YaEBM/review" target="_blank" style="font-size:12px;color:var(--gold);font-weight:600">★ Jacksonville →</a>
-          </div>
-        </div>
-      </div>
-      <div class="fc">
-        <div class="fct">Locations</div>
-        <a href="https://share.google/SCGiXIZsiGXPrFgoq" target="_blank">📍 Perry Hall</a>
-        <a href="https://share.google/m3ZiYre9RY4MF6KvD" target="_blank">📍 Lutherville</a>
-        <a href="https://share.google/m3ZiYre9RY4MF6KvD" target="_blank">📍 Jacksonville</a>
-        <a href="tel:4105293303" style="margin-top:8px">📞 (410) 529-3303</a>
-        <a href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank" style="margin-top:4px">Schedule Online →</a>
       </div>
       <div class="fc">
         <div class="fct">Services</div>
@@ -3317,8 +3235,8 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         <a onclick="go('general')">General Info</a>
         <a onclick="go('expect')">What to Expect</a>
         <a onclick="go('resources')">Helpful Resources</a>
-        <a href="https://www.thorne.com/u/ActiveLifeandSports" target="_blank">Supplements by Thorne →</a>
-        <a href="https://activelifefitness.mypthub.net/p/" target="_blank">Shop Services →</a>
+        <a onclick="go('thorne')">Supplements by Thorne</a>
+        <a onclick="go('store')">Storefront</a>
         <a onclick="go('community')">Community Relations</a>
         <a onclick="go('success')">Success Stories</a>
         <a href="https://go.promptemr.com/payment?w=642" target="_blank">Pay Bill →</a>
@@ -3331,7 +3249,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
         <a onclick="go('team-jv')">Jacksonville Team</a>
         <a onclick="go('team-support')">Support Team</a>
         <a onclick="go('physician')">Physician Portal</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3WG40icTMDXeB9e0qlDH8otDP93yEds73idkS68x0KtYuLA/viewform" target="_blank">Apply to Join Our Team →</a>
+        <a onclick="go('careers')">Careers</a>
         <a href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank">Schedule a Visit</a>
       </div>
     </div>
