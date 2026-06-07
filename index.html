@@ -652,6 +652,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
           <a onclick="go('expect')">What to Expect</a>
           <a onclick="go('faq')">FAQs</a>
           <a onclick="go('resources')">Helpful Resources</a>
+          <a onclick="go('records')">Medical Records</a>
           <a onclick="go('thorne')">Supplements by Thorne</a>
           <a onclick="go('store')">Storefront</a>
           <a onclick="go('community')">Community Relations</a>
@@ -704,6 +705,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
     <a onclick="go('faq');closeM()">FAQs</a>
     <a onclick="go('expect');closeM()">What to Expect</a>
     <a onclick="go('resources');closeM()">Helpful Resources</a>
+    <a onclick="go('records');closeM()">Medical Records</a>
   </div>
   <div class="mnl" onclick="mSub(this)">Our Team ▾</div>
   <div class="msub" style="display:none">
@@ -2181,6 +2183,7 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
     <div class="card cbone"><div class="ib">🗒️</div><h3>Preparing for Your Visit</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">What to bring, what to wear, and how to get the most out of your first appointment.</p><div style="margin-top:16px"><a class="bp" onclick="go('prepare')" style="font-size:13px;padding:8px 16px">Get Ready →</a></div></div>
     <div class="card cbone"><div class="ib ibg">❓</div><h3>FAQs</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Referrals, insurance, costs, visit length — the questions patients ask us most.</p><div style="margin-top:16px"><a class="bp" onclick="go('faq')" style="font-size:13px;padding:8px 16px">Read FAQs →</a></div></div>
     <div class="card cbone"><div class="ib">📄</div><h3>Patient Forms</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">New patient intake, health history, and consent forms. Complete before your first visit.</p><div style="margin-top:16px"><a class="bp" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank" style="font-size:13px;padding:8px 16px">Access Forms →</a></div></div>
+    <div class="card cbone"><div class="ib ibg">🗂️</div><h3>Medical Records</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Let us request records from your other providers, or get a copy of your records from us.</p><div style="margin-top:16px"><a class="bp" onclick="go('records')" style="font-size:13px;padding:8px 16px">Records Forms →</a></div></div>
     <div class="card cbone"><div class="ib ibg">💳</div><h3>Pay Your Bill</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Secure online billing through our patient portal. No login required.</p><div style="margin-top:16px"><a href="https://go.promptemr.com/payment?w=642" target="_blank" class="bp" style="font-size:13px;padding:8px 16px">Pay Bill →</a></div></div>
     <div class="card cbone"><div class="ib">💊</div><h3>Supplements by Thorne</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Clinician-curated supplements for recovery and performance.</p><div style="margin-top:16px"><a class="bp" onclick="go('thorne')" style="font-size:13px;padding:8px 16px">Shop Thorne →</a></div></div>
     <div class="card cbone"><div class="ib" style="background:rgba(37,211,102,.12)">📱</div><h3>Save Our Contact</h3><p style="font-size:15px;color:var(--slate);margin-top:8px">Save Active Life PT in your phone so you never miss a call or text from us.</p><div style="margin-top:16px;display:flex;flex-direction:column;gap:8px"><a class="bp" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Active%20Life%20Physical%20Therapy%0AORG:Active%20Life%20Physical%20Therapy%0ATEL;TYPE=WORK,VOICE:(410)%20529-3303%0AADR;TYPE=WORK:;;4337%20Ebenezer%20Rd;Nottingham;MD;21236;USA%0AURL:https://www.activelifesports.com%0AEMAIL:info@activelifesports.com%0AEND:VCARD" download="ActiveLifePT.vcf" style="font-size:13px;padding:8px 16px">Save Contact →</a></div></div>
@@ -2387,21 +2390,62 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
 </div></section>
 </div></div>
 
-<!-- PREPARING FOR YOUR VISIT -->
-<div class="page" data-page="prepare"><div class="pc">
+<!-- MEDICAL RECORDS -->
+<div class="page" data-page="records"><div class="pc">
 <section class="phero phero-bone"><div class="cn">
-  <div class="pey">Patient Hub · Preparing for Your Visit</div>
-  <h1 class="ph1">A Little Prep<br><em>Goes a Long Way.</em></h1>
-  <p class="psub">The more your therapist knows on day one, the faster you get a plan that actually works. Here's how to make your first visit count.</p>
+  <div class="pey">Patient Hub · Medical Records</div>
+  <h1 class="ph1">Your Records,<br><em>Handled the Easy Way.</em></h1>
+  <p class="psub">Two simple forms — one to let us pull the records we need to treat you, and one to get a copy of your own records from us. Pick whichever you need below.</p>
 </div></section>
 
 <section class="sec"><div class="cn">
-  <div class="sh2"><div class="ey">Before You Arrive</div><h2>Your Pre-Visit<br>Checklist</h2><p class="lede">Five minutes of prep saves your therapist guesswork — and gets you to a real plan faster.</p></div>
+  <div class="sh2"><div class="ey">Choose Your Form</div><h2>Which One<br>Do You Need?</h2></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+
+    <div class="card cbone"><div class="ib">📥</div><h3>Let us access your records</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Use this form to authorize us to request your records — imaging, surgical reports, or notes — from your physician or another provider. The more we know, the better we can build your plan.</p>
+      <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="bp" href="#" style="font-size:13px;padding:8px 16px">Complete Online →</a>
+        <a class="bs" href="#" style="font-size:13px;padding:8px 16px">Download PDF →</a>
+      </div>
+    </div>
+
+    <div class="card cbone"><div class="ib ibg">📤</div><h3>Request your records from us</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Want a copy of your Active Life records, or need them sent to another provider, attorney, or insurer? Submit a records request here and our team will take care of it.</p>
+      <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="bp" href="#" style="font-size:13px;padding:8px 16px">Request Records →</a>
+        <a class="bs" href="#" style="font-size:13px;padding:8px 16px">Download PDF →</a>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<section class="sec sec-bone"><div class="cn">
+  <div class="sh2"><div class="ey">How It Works</div><h2>Simple, Secure,<br>and Private</h2></div>
+  <div class="g3">
+    <div class="card"><div class="ib">1️⃣</div><h3>Fill out the form</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Complete it online in a couple of minutes, or print and bring it in. You tell us exactly what to share and with whom.</p></div>
+    <div class="card"><div class="ib ibg">2️⃣</div><h3>We handle the rest</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Our team processes your request and follows up with you or the receiving provider directly.</p></div>
+    <div class="card"><div class="ib">3️⃣</div><h3>Your info stays protected</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Every request is handled in line with HIPAA. Your records are only shared with the people you name.</p></div>
+  </div>
+  <p style="text-align:center;font-size:15px;color:var(--slate);max-width:620px;margin:40px auto 0">Questions about your records? Call us at <strong style="color:var(--navy)">(410) 529-3303</strong> and we'll walk you through it.</p>
+</div></section>
+</div></div>
+
+<!-- PREPARING FOR YOUR VISIT -->
+<div class="page" data-page="prepare"><div class="pc">
+<section class="phero phero-bone"><div class="cn">
+  <div class="pey">Patient Hub · Patient Success</div>
+  <h1 class="ph1">A Little Prep<br><em>Goes a Long Way.</em></h1>
+  <p class="psub">The patients who get the best results all do a few simple things. Here's how to set yourself up to succeed in PT — starting before your first visit and all the way through.</p>
+</div></section>
+
+<section class="sec"><div class="cn">
+  <div class="sh2"><div class="ey">Before You Arrive</div><h2>Your Pre-Visit<br>Checklist</h2><p class="lede">A few minutes of prep saves your therapist guesswork — and gets you to a real plan faster.</p></div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px">
-    <div class="card cbone"><div class="ib">📝</div><h3>Jot down your questions</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Write down anything you want to ask — when it started, what makes it worse, what you're hoping to get back to. No question is too small.</p></div>
-    <div class="card cbone"><div class="ib ibg">📈</div><h3>Track your symptoms</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Note when the pain shows up, how bad it gets, and what activities set it off. Patterns help us pinpoint the cause faster.</p></div>
-    <div class="card cbone"><div class="ib">🩺</div><h3>Gather your history</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Bring recent imaging (X-rays, MRIs) and any relevant records, plus a list of the medications, vitamins, and supplements you take.</p></div>
-    <div class="card cbone"><div class="ib ibg">✅</div><h3>No referral? No problem.</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Maryland is a direct-access state — you can see a Doctor of PT without a physician's referral for most plans. We'll verify your benefits before you arrive.</p></div>
+    <div class="card cbone"><div class="ib">📝</div><h3>Fill out your paperwork</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Complete your intake and health history ahead of time through Prompt, our patient portal. Done before you walk in means more time spent on you, not forms.</p><div style="margin-top:16px"><a class="bp" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank" style="font-size:13px;padding:8px 16px">Complete Forms →</a></div></div>
+    <div class="card cbone"><div class="ib ibg">📱</div><h3>Download the app</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Get the free Prompt for Patients app — your home exercises with HD videos, secure messaging with your therapist, and your appointments, all in one place.</p><div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap"><a class="bp" href="https://apps.apple.com/us/app/prompt-for-patients/id6747506176" target="_blank" style="font-size:13px;padding:8px 16px">App Store →</a><a class="bs" href="https://play.google.com/store/apps/details?id=com.ptwired.prompt" target="_blank" style="font-size:13px;padding:8px 16px">Google Play →</a></div></div>
+    <div class="card cbone"><div class="ib">🧠</div><h3>Bring the useful details</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Jot down what's going on and what you want to ask: when it started, what makes it worse, when the pain shows up, what activities set it off, and what you're hoping to get back to. Patterns and questions help us pinpoint the cause faster — no detail is too small.</p></div>
+    <div class="card cbone"><div class="ib ibg">🩺</div><h3>Gather your history</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Bring recent imaging (X-rays, MRIs) and any relevant records, plus a list of the medications, vitamins, and supplements you take.</p></div>
+    <div class="card cbone"><div class="ib">✅</div><h3>No referral? No problem.</h3><p style="font-size:15px;line-height:1.65;color:var(--slate);margin-top:8px">Maryland is a direct-access state — you can see a Doctor of PT without a physician's referral for most plans. We'll verify your benefits before you arrive.</p></div>
   </div>
 </div></section>
 
@@ -2420,6 +2464,14 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
     <div class="card cbone"><div class="ib ibg">🧭</div><h3>Follow the plan</h3><p style="font-size:15px;line-height:1.6;color:var(--slate);margin-top:8px">Your therapist builds a roadmap for a reason. Trust it — and tell us what's working.</p></div>
     <div class="card cbone"><div class="ib">🏠</div><h3>Do your home exercises</h3><p style="font-size:15px;line-height:1.6;color:var(--slate);margin-top:8px">What you do between visits matters as much as the visits themselves.</p></div>
     <div class="card cbone"><div class="ib ibg">💪</div><h3>Keep it up after</h3><p style="font-size:15px;line-height:1.6;color:var(--slate);margin-top:8px">Staying strong after discharge is how you keep the pain from coming back. We'll show you how.</p></div>
+  </div>
+  <div style="max-width:760px;margin:48px auto 0;background:var(--bone);border:1px solid var(--border-bone);border-radius:var(--r);padding:28px 28px 30px">
+    <div class="ey" style="text-align:center;margin-bottom:6px">Two Things That Make It Easier</div>
+    <p style="text-align:center;font-size:15px;color:var(--slate);max-width:520px;margin:0 auto 22px">Set these up once and the four habits above get a whole lot simpler.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+      <div class="card"><div class="ib ibg">📱</div><h3 style="font-size:17px">Download the app</h3><p style="font-size:14px;line-height:1.6;color:var(--slate);margin-top:8px">Your home exercises, HD how-to videos, and a direct line to your therapist — right in your pocket.</p><div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><a class="bp" href="https://apps.apple.com/us/app/prompt-for-patients/id6747506176" target="_blank" style="font-size:13px;padding:8px 16px">App Store →</a><a class="bs" href="https://play.google.com/store/apps/details?id=com.ptwired.prompt" target="_blank" style="font-size:13px;padding:8px 16px">Google Play →</a></div></div>
+      <div class="card"><div class="ib" style="background:rgba(37,211,102,.12)">💬</div><h3 style="font-size:17px">Save our number</h3><p style="font-size:14px;line-height:1.6;color:var(--slate);margin-top:8px">Save <strong>(410) 529-3303</strong> so you never miss a call or text from us — and so reaching us takes one tap.</p><div style="margin-top:14px"><a class="bp" href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Active%20Life%20Physical%20Therapy%0AORG:Active%20Life%20Physical%20Therapy%0ATEL;TYPE=WORK,VOICE:(410)%20529-3303%0AADR;TYPE=WORK:;;4337%20Ebenezer%20Rd;Nottingham;MD;21236;USA%0AURL:https://www.activelifesports.com%0AEMAIL:info@activelifesports.com%0AEND:VCARD" download="ActiveLifePT.vcf" style="font-size:13px;padding:8px 16px">Save Contact →</a></div></div>
+    </div>
   </div>
   <div style="text-align:center;margin-top:48px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
     <a class="bp" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank">Schedule Your Visit →</a>
