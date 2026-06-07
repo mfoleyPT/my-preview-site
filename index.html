@@ -426,7 +426,11 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   .g3,.g2,.sgrid,.sgd,.g4,.fg{grid-template-columns:1fr}
   .sec{padding:64px 0}
   .hero{padding:80px 0 72px}
-  .ubar .c{flex-wrap:wrap;gap:8px}
+  .ubar .c{flex-wrap:nowrap;gap:8px;justify-content:space-between}
+  .ubar .ur{display:none}
+  .ubar .ul{gap:12px;flex-wrap:nowrap}
+  .uphone{font-size:12px!important}
+  .upay{font-size:10px;padding:4px 10px}
   .ctag{flex-direction:column;align-items:flex-start}
   .hero .ctag{align-items:center}
   .hero .hero-proof{gap:12px}
@@ -479,6 +483,8 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   .tbadge{font-size:11px}
   .fg{grid-template-columns:1fr 1fr;gap:32px 24px;padding:0 24px 40px}
   .urgency-bar{font-size:12px;padding:8px 16px}
+  /* Hero eyebrow pill: wrap text, smaller font, tighten spacing */
+  .hero .hey{font-size:10px;letter-spacing:.10em;padding:6px 14px;text-align:center;white-space:normal;max-width:90%;line-height:1.5}
 }
 
 /* ── SGRID MOBILE ─────────────────────────────── */
