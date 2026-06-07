@@ -577,6 +577,80 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
 @media(max-width:768px){
   .review-slide{padding:0}
 }
+/* ===== PATIENT SUCCESS STORIES (ss-) — shared by home + /success page ===== */
+.ss-section{
+  --ss-navy:var(--navy,#004680);
+  --ss-gold:var(--gold,#E4D77E);
+  --ss-bone:var(--bone,#F6F2E9);
+  --ss-ink:var(--ink,#1A1A1A);
+  --ss-slate:var(--slate,#5B5E64);
+  --ss-ease:cubic-bezier(0.4,0,0.2,1);
+  background:var(--ss-bone);padding:96px 0;position:relative;overflow:hidden;
+  font-family:'Inter',sans-serif;color:var(--ss-ink);line-height:1.6;
+}
+.ss-wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+.ss-eyebrow{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ss-navy);margin-bottom:16px;display:inline-block;}
+.ss-eyebrow::before{content:"";display:inline-block;width:28px;height:3px;background:var(--ss-gold);
+  vertical-align:middle;margin-right:12px;border-radius:2px;}
+.ss-title{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(32px,4.5vw,52px);
+  line-height:1.05;letter-spacing:-.02em;color:var(--ss-navy);max-width:18ch;margin:0;}
+.ss-title em{font-style:italic;}
+.ss-lede{font-size:19px;color:var(--ss-slate);max-width:58ch;margin:20px 0 0;}
+.ss-header{margin-bottom:56px;}
+
+.ss-featured{display:grid;grid-template-columns:minmax(280px,1fr) 1.3fr;gap:0;background:var(--ss-navy);
+  border-radius:20px;overflow:hidden;margin-bottom:56px;box-shadow:0 18px 50px rgba(0,70,128,.16);}
+.ss-featured-photo{position:relative;min-height:380px;
+  background:linear-gradient(150deg,#0a5a9e 0%,var(--ss-navy) 100%);
+  display:flex;align-items:center;justify-content:center;}
+.ss-featured-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.ss-ph{width:150px;height:150px;border-radius:50%;background:var(--ss-bone);display:flex;
+  align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;
+  font-size:48px;color:var(--ss-navy);border:4px solid var(--ss-gold);}
+.ss-ph-note{position:absolute;bottom:18px;left:0;right:0;text-align:center;
+  color:rgba(246,242,233,.6);font-size:12px;}
+.ss-featured-body{padding:48px;color:#fff;}
+.ss-tag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ss-gold);margin-bottom:20px;display:block;}
+.ss-featured-quote{font-family:'Fraunces',serif;font-style:italic;font-weight:700;
+  font-size:clamp(24px,2.6vw,32px);line-height:1.25;letter-spacing:-.01em;margin:0 0 24px;}
+.ss-featured-text{font-size:16px;color:rgba(246,242,233,.86);margin:0 0 28px;}
+.ss-person{display:flex;align-items:center;gap:14px;}
+.ss-person strong{display:block;font-weight:700;font-size:16px;}
+.ss-person span{font-size:14px;color:rgba(246,242,233,.7);}
+.ss-dot{width:8px;height:8px;border-radius:50%;background:var(--ss-gold);}
+
+.ss-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.ss-card{background:#fff;border-radius:16px;padding:32px;border:1px solid rgba(0,70,128,.08);
+  transition:transform .2s var(--ss-ease),box-shadow .2s var(--ss-ease);display:flex;flex-direction:column;}
+.ss-card:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,70,128,.12);}
+.ss-card-photo{position:relative;overflow:hidden;width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(150deg,var(--ss-bone),#e9e2d2);display:flex;align-items:center;
+  justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:24px;
+  color:var(--ss-navy);margin-bottom:22px;border:2px solid var(--ss-gold);}
+.ss-card-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.ss-card-quote{font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:21px;
+  line-height:1.28;color:var(--ss-navy);letter-spacing:-.01em;margin:0 0 16px;}
+.ss-card-text{font-size:15px;color:var(--ss-slate);margin:0 0 22px;flex-grow:1;}
+.ss-card-meta{border-top:1px solid rgba(0,70,128,.1);padding-top:16px;margin-top:auto;}
+.ss-card-meta strong{display:block;font-size:15px;color:var(--ss-ink);font-weight:700;}
+.ss-card-meta span{font-size:13px;color:var(--ss-slate);}
+.ss-loc{display:inline-block;margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ss-navy);background:var(--ss-bone);padding:4px 10px;border-radius:20px;}
+
+.ss-cta{margin-top:64px;background:#fff;border:2px dashed rgba(0,70,128,.18);border-radius:18px;
+  padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.ss-cta h3{font-family:'Fraunces',serif;font-weight:700;font-size:26px;color:var(--ss-navy);
+  letter-spacing:-.01em;margin:0 0 6px;}
+.ss-cta p{color:var(--ss-slate);font-size:15px;max-width:46ch;margin:0;}
+.ss-btn{font-family:'Inter',sans-serif;font-weight:600;font-size:16px;background:var(--ss-navy);
+  color:#fff;padding:16px 30px;border-radius:10px;text-decoration:none;white-space:nowrap;
+  transition:background .2s var(--ss-ease),transform .2s var(--ss-ease);border:none;cursor:pointer;}
+.ss-btn:hover{background:#003a6b;transform:translateY(-2px);}
+
+@media(max-width:900px){.ss-featured{grid-template-columns:1fr;}.ss-featured-photo{min-height:260px;}.ss-grid{grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce){.ss-section *{transition:none!important;animation:none!important;}}
 </style>
 </head>
 <body>
@@ -993,6 +1067,69 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
     </div>
   </div>
 </div></section>
+
+
+<!-- ============ PATIENT SUCCESS STORIES (home — featured + 3) ============ -->
+<section id="success-stories" class="ss-section">
+  <div class="ss-wrap">
+    <div class="ss-header">
+      <span class="ss-eyebrow">Patient Success Stories</span>
+      <h2 class="ss-title">Real people. Real progress. <em>In their own words.</em></h2>
+      <p class="ss-lede">Every patient who walks through our doors has a story — where they started, what they were afraid of, and what they can do now. These are theirs.</p>
+    </div>
+
+    <!-- FEATURED STORY -->
+    <div class="ss-featured">
+      <div class="ss-featured-photo">
+        <div class="ss-ph">SM</div>
+        <div class="ss-ph-note">[ swap src for a hosted photo ]</div>
+        <img src="images/success-stories/susan-m.jpg" alt="Susan M." onerror="this.remove()">
+      </div>
+      <div class="ss-featured-body">
+        <span class="ss-tag">Featured Story · Perry Hall</span>
+        <p class="ss-featured-quote">"I walked in with a cane after my knee replacement. Twelve weeks later I was back on the golf course."</p>
+        <p class="ss-featured-text">Susan came to us recovering from a total knee replacement, worried she'd never get back to the things she loved. She did the work, we built the strength, and she graduated stronger than before her surgery — back to 18 holes with her grandkids tagging along.</p>
+        <div class="ss-person">
+          <span class="ss-dot"></span>
+          <div><strong>Susan M.</strong><span>Total knee replacement recovery · Age 64</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY GRID -->
+    <div class="ss-grid">
+      <div class="ss-card">
+        <div class="ss-card-photo">RT<img src="images/success-stories/robert-t.jpg" alt="Robert T." onerror="this.remove()"></div>
+        <p class="ss-card-quote">"They actually listened. I wasn't just a number on a schedule."</p>
+        <p class="ss-card-text">Two years of low back pain and a stack of failed treatments. We found the root cause, rebuilt his core strength, and got him back to lifting his kids without thinking twice.</p>
+        <div class="ss-card-meta"><strong>Robert T.</strong><span>Chronic low back pain</span><br><span class="ss-loc">Lutherville</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">DK<img src="images/success-stories/diane-k.jpg" alt="Diane K." onerror="this.remove()"></div>
+        <p class="ss-card-quote">"I came in scared of falling. I left feeling steady again."</p>
+        <p class="ss-card-text">Recurring dizziness was keeping her home and anxious. After vestibular therapy and balance training, she's traveling again — and back to her morning walks with confidence.</p>
+        <div class="ss-card-meta"><strong>Diane K.</strong><span>Vertigo &amp; balance</span><br><span class="ss-loc">Jacksonville</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">MA<img src="images/success-stories/marcus-a.jpg" alt="Marcus A." onerror="this.remove()"></div>
+        <p class="ss-card-quote">"This wasn't just heat and stim. I had a real workout."</p>
+        <p class="ss-card-text">A weekend runner sidelined by a nagging hip. Active Run analysis found the cause, we rebuilt his mechanics, and he's back to training for his next half marathon.</p>
+        <div class="ss-card-meta"><strong>Marcus A.</strong><span>Running injury · Active Run</span><br><span class="ss-loc">Jacksonville</span></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="ss-cta">
+      <div>
+        <h3>Finished your plan of care with us?</h3>
+        <p>We'd love to feature your story — it takes about 3 minutes, and it helps other people in Baltimore County find the help they need. (You'll earn an Active Life t-shirt, too.)</p>
+      </div>
+      <a href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank" class="ss-btn">Share your story &rarr;</a>
+    </div>
+  </div>
+</section>
+<!-- ============ END PATIENT SUCCESS STORIES (home) ============ -->
+
 
 <section class="fcta"><div class="cn" style="position:relative;z-index:1">
   <div class="ey" style="color:rgba(255,255,255,.4)">Ready to Move Forward?</div>
@@ -2616,19 +2753,90 @@ h3{font-size:clamp(18px,2.5vw,22px);letter-spacing:-.01em;line-height:1.25}
   <p class="psub">The goal was never just "less pain." It was getting back to the gym, playing with the grandkids, finishing the race. Here's what that looks like.</p>
 </div></section>
 
-<section class="sec"><div class="cn">
-  <div class="g3">
-    <div class="tc" style="display:flex;flex-direction:column"><div class="tstars">★★★★★</div><div class="tq">"I'd been to two other PT clinics before Active Life. This was the first time anyone actually asked me what I wanted to get back to — and then built a plan around that answer. Back at the gym, full strength."</div><div class="ta" style="margin-top:auto;padding-top:20px"><div class="av">M</div><div><div class="an">Mike R.</div><div class="ar">Knee replacement rehab · Perry Hall</div></div></div></div>
-    <div class="tc" style="background:var(--bone);color:var(--ink);display:flex;flex-direction:column"><div class="tq" style="color:var(--navy)">"I got on the floor with my granddaughter last week for the first time in two years. I didn't think twice about it. That's what I came here for."</div><div class="ta" style="margin-top:auto;padding-top:20px"><div class="av" style="background:var(--navy);color:white">K</div><div><div class="an">Karen T.</div><div class="ar" style="color:var(--slate)">Hip & knee rehab · Lutherville</div></div></div></div>
-    <div class="tc" style="display:flex;flex-direction:column"><div class="tstars">★★★★★</div><div class="tq">"I finished my first half marathon after ACL surgery. My PT at Active Life kept me honest about the timeline and pushed me when I was ready. Crossed the finish line stronger than I was before the injury."</div><div class="ta" style="margin-top:auto;padding-top:20px"><div class="av">J</div><div><div class="an">James W.</div><div class="ar">ACL reconstruction · Jacksonville</div></div></div></div>
-    <div class="tc" style="background:var(--bone);color:var(--ink);display:flex;flex-direction:column"><div class="tq" style="color:var(--navy)">"Three PTs at other places told me my shoulder would never be 100%. Active Life got me to 110%. I'm lifting more now than I was before the rotator cuff tear."</div><div class="ta" style="margin-top:auto;padding-top:20px"><div class="av" style="background:var(--navy);color:white">T</div><div><div class="an">Tom H.</div><div class="ar" style="color:var(--slate)">Rotator cuff rehab · Perry Hall</div></div></div></div>
-    <div class="tc" style="display:flex;flex-direction:column"><div class="tstars">★★★★★</div><div class="tq">"I was scared to move for six months after my spinal fusion. The Active Life team rebuilt my confidence as much as my body. I'm hiking again. That wasn't supposed to happen."</div><div class="ta" style="margin-top:auto;padding-top:20px"><div class="av">D</div><div><div class="an">Diane M.</div><div class="ar">Spinal fusion rehab · Lutherville</div></div></div></div>
-    <div class="tc" style="background:var(--bone);color:var(--ink);display:flex;flex-direction:column"><div class="tq" style="color:var(--navy)">"Every visit was one-on-one. My therapist knew exactly where I was in the program every single time. That kind of attention is why this worked when nothing else did."</div><div class="ta" style="margin-top:auto;padding-top:20px"><div class="av" style="background:var(--navy);color:white">R</div><div><div class="an">Robert S.</div><div class="ar" style="color:var(--slate)">Chronic low back pain · Jacksonville</div></div></div></div>
+
+<section id="success-stories" class="ss-section">
+  <div class="ss-wrap">
+    <!-- FEATURED STORY -->
+    <div class="ss-featured">
+      <div class="ss-featured-photo">
+        <div class="ss-ph">SM</div>
+        <div class="ss-ph-note">[ swap src for a hosted photo ]</div>
+        <img src="images/success-stories/susan-m.jpg" alt="Susan M." onerror="this.remove()">
+      </div>
+      <div class="ss-featured-body">
+        <span class="ss-tag">Featured Story · Perry Hall</span>
+        <p class="ss-featured-quote">"I walked in with a cane after my knee replacement. Twelve weeks later I was back on the golf course."</p>
+        <p class="ss-featured-text">Susan came to us recovering from a total knee replacement, worried she'd never get back to the things she loved. She did the work, we built the strength, and she graduated stronger than before her surgery — back to 18 holes with her grandkids tagging along.</p>
+        <div class="ss-person">
+          <span class="ss-dot"></span>
+          <div><strong>Susan M.</strong><span>Total knee replacement recovery · Age 64</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FULL ARCHIVE GRID -->
+    <div class="ss-grid">
+      <div class="ss-card">
+        <div class="ss-card-photo">RT<img src="images/success-stories/robert-t.jpg" alt="Robert T." onerror="this.remove()"></div>
+        <p class="ss-card-quote">"They actually listened. I wasn't just a number on a schedule."</p>
+        <p class="ss-card-text">Two years of low back pain and a stack of failed treatments. We found the root cause, rebuilt his core strength, and got him back to lifting his kids without thinking twice.</p>
+        <div class="ss-card-meta"><strong>Robert T.</strong><span>Chronic low back pain</span><br><span class="ss-loc">Lutherville</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">DK<img src="images/success-stories/diane-k.jpg" alt="Diane K." onerror="this.remove()"></div>
+        <p class="ss-card-quote">"I came in scared of falling. I left feeling steady again."</p>
+        <p class="ss-card-text">Recurring dizziness was keeping her home and anxious. After vestibular therapy and balance training, she's traveling again — and back to her morning walks with confidence.</p>
+        <div class="ss-card-meta"><strong>Diane K.</strong><span>Vertigo &amp; balance</span><br><span class="ss-loc">Jacksonville</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">MA<img src="images/success-stories/marcus-a.jpg" alt="Marcus A." onerror="this.remove()"></div>
+        <p class="ss-card-quote">"This wasn't just heat and stim. I had a real workout."</p>
+        <p class="ss-card-text">A weekend runner sidelined by a nagging hip. Active Run analysis found the cause, we rebuilt his mechanics, and he's back to training for his next half marathon.</p>
+        <div class="ss-card-meta"><strong>Marcus A.</strong><span>Running injury · Active Run</span><br><span class="ss-loc">Jacksonville</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">MR</div>
+        <p class="ss-card-quote">"The first time anyone asked what I wanted to get back to — then built a plan around that answer. Back at the gym, full strength."</p>
+        <div class="ss-card-meta"><strong>Mike R.</strong><span>Knee replacement rehab</span><br><span class="ss-loc">Perry Hall</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">KT</div>
+        <p class="ss-card-quote">"I got on the floor with my granddaughter last week for the first time in two years. That's what I came here for."</p>
+        <div class="ss-card-meta"><strong>Karen T.</strong><span>Hip &amp; knee rehab</span><br><span class="ss-loc">Lutherville</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">JW</div>
+        <p class="ss-card-quote">"I finished my first half marathon after ACL surgery. Crossed the finish line stronger than I was before the injury."</p>
+        <div class="ss-card-meta"><strong>James W.</strong><span>ACL reconstruction</span><br><span class="ss-loc">Jacksonville</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">TH</div>
+        <p class="ss-card-quote">"Other places told me my shoulder would never be 100%. I'm lifting more now than I was before the rotator cuff tear."</p>
+        <div class="ss-card-meta"><strong>Tom H.</strong><span>Rotator cuff rehab</span><br><span class="ss-loc">Perry Hall</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">DM</div>
+        <p class="ss-card-quote">"I was scared to move for six months after my spinal fusion. They rebuilt my confidence as much as my body. I'm hiking again."</p>
+        <div class="ss-card-meta"><strong>Diane M.</strong><span>Spinal fusion rehab</span><br><span class="ss-loc">Lutherville</span></div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-card-photo">RS</div>
+        <p class="ss-card-quote">"My therapist knew exactly where I was in the program every single time. That kind of focused attention is why this worked when nothing else did."</p>
+        <div class="ss-card-meta"><strong>Robert S.</strong><span>Chronic low back pain</span><br><span class="ss-loc">Jacksonville</span></div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="ss-cta">
+      <div>
+        <h3>Finished your plan of care with us?</h3>
+        <p>We'd love to feature your story — it takes about 3 minutes, and it helps other people in Baltimore County find the help they need. (You'll earn an Active Life t-shirt, too.)</p>
+      </div>
+      <a href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank" class="ss-btn">Share your story &rarr;</a>
+    </div>
   </div>
-  <div style="text-align:center;margin-top:48px">
-    <a class="bp" href="https://scheduling.go.promptemr.com/onlineScheduling?w=642&s=DL" target="_blank">Start Your Story →</a>
-  </div>
-</div></section>
+</section>
+
 </div></div>
 
 <!-- WHAT WE TREAT -->
